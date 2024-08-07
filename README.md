@@ -7,17 +7,18 @@ The website is currently under production and can be found here:
 [Ignite Life Website](https://ignite-life.netlify.app)
 
 ## Table of Contents
+
 - [Requirements](#requirements)
-    - [Release 1: Landing Page](#release-1-landing-page)
-        - [Layout](#layout)
-        - [Pages](#pages)
-        - [Content and Visual](#content-and-visual)
-        - [Animations and Response](#animations-and-response)
-        - [Accessibility](#accessibility)
-        - [Search Engine Optimisation](#search-engine-optimisation)
-        - [Testing](#testing)
-    - [Release 2: Booking Management System with Authentication and Emails](#release-2-booking-management-system-with-authentication-and-emails)
-    - [Release 3: Custom Newsletters, Blog, and Complete Admin Panel](#release-3-custom-newsletters-blog-and-complete-admin-panel)
+  - [Release 1: Landing Page](#release-1-landing-page)
+    - [Layout](#layout)
+    - [Pages](#pages)
+    - [Content and Visual](#content-and-visual)
+    - [Animations and Response](#animations-and-response)
+    - [Accessibility](#accessibility)
+    - [Search Engine Optimisation](#search-engine-optimisation)
+    - [Testing](#testing)
+  - [Release 2: Booking Management System with Authentication and Emails](#release-2-booking-management-system-with-authentication-and-emails)
+  - [Release 3: Custom Newsletters, Blog, and Complete Admin Panel](#release-3-custom-newsletters-blog-and-complete-admin-panel)
 - [Getting Started](#getting-started)
 
 ## Requirements
@@ -27,6 +28,7 @@ The website is currently under production and can be found here:
 #### Layout
 
 ##### Header
+
 - [ ] Logo
 - [ ] Navigation Links
 - [ ] Search Bar
@@ -42,6 +44,7 @@ The website is currently under production and can be found here:
 - [ ] Test - DevTools
 
 ##### Footer
+
 - [x] Hours
 - [x] Logo
 - [x] Contact
@@ -62,6 +65,7 @@ The website is currently under production and can be found here:
 #### Pages
 
 ##### Home
+
 - [ ] Hero Section (Banner/Image Slider)
 - [ ] Introduction Text
 - [ ] Featured Products/Services
@@ -78,6 +82,7 @@ The website is currently under production and can be found here:
 - [ ] Test - DevTools
 
 ##### About
+
 - [ ] Company History
 - [ ] Mission and Vision
 - [ ] Team Members
@@ -93,6 +98,7 @@ The website is currently under production and can be found here:
 - [ ] Test - DevTools
 
 ##### Book
+
 - [ ] Booking Form
 - [ ] Service List
 - [ ] Pricing Information
@@ -108,6 +114,7 @@ The website is currently under production and can be found here:
 - [ ] Test - DevTools
 
 ##### Treatments and Groups
+
 - [ ] List of Treatments
 - [ ] Group Sessions Information
 - [ ] Detailed Descriptions
@@ -122,14 +129,14 @@ The website is currently under production and can be found here:
 - [ ] Performance and SEO
 - [ ] Test - DevTools
 
-
-
 ### Release 2: Booking Management System with Authentication and Emails
+
 - Implement user authentication with Supabase
 - Create a booking management system
 - Integrate Amazon SES for email notifications
 
 ### Release 3: Custom Newsletters, Blog, and Complete Admin Panel
+
 - Develop a custom admin panel for managing bookings, users and other business operations
 - Implement a system that automatically posts a blog for events and sends campaign emails upon posting
 
@@ -152,4 +159,3 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-

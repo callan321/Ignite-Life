@@ -2,9 +2,7 @@ export const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Book", href: "https://ignite-life-bowen-therapy.square.site" },
-  { name: "Treatments", href: "/treatments" },
-  { name: "Retreats & Groups", href: "/retreats-groups" },
-  { name: "Contact", href: "/contact" },
+  { name: "Treatments & Groups", href: "/treatments" },
 ];
 
 export const hours = [

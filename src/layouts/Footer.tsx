@@ -2,10 +2,10 @@ import { address, email, hours, phone } from "../config.ts";
 import { Link } from "react-router-dom";
 
 function BlueLink({
-                    name,
-                    href,
-                    text,
-                  }: {
+  name,
+  href,
+  text,
+}: {
   name: string;
   href: string;
   text?: string;
@@ -13,7 +13,7 @@ function BlueLink({
   return (
     <Link to={href} target="_blank" rel="noopener noreferrer">
       <span className="font-normal">
-         {`${text}:   `}
+        {`${text}:   `}
         <span className="text-blue-500 hover:text-blue-600 hover:underline">
           {name}
         </span>
@@ -24,7 +24,7 @@ function BlueLink({
 
 const DividingLine = () => (
   <div className="w-3/4 p-8">
-    <hr className="border-b-0 border-gray-300 shadow-md" />
+    <hr className="border-b-0 border-gray-300" />
   </div>
 );
 
@@ -53,8 +53,7 @@ const Hours = () => (
 );
 
 const ContactDetails = () => (
-  <div className="flex w-full flex-col pl-8">
-    <div className="flex flex-col space-y-2 text-xs">
+  <div className="flex w-full flex-col pl-8 space-y-2 text-xs ">
       <h3 className="text-sm font-medium">Contact details</h3>
       <BlueLink name={phone.phone} href={phone.href} text={"P"} />
       <BlueLink name={email.email} href={email.href} text={"E"} />
@@ -65,16 +64,13 @@ const ContactDetails = () => (
           <BlueLink href={address.href} name={"Get Directions"} />
         </p>
       </div>
-    </div>
   </div>
 );
 
 const Newsletter = () => (
-  <div className="flex w-full flex-col pl-8">
-    <div className="flex flex-col space-y-2 text-xs">
+  <div className="flex w-full flex-col pl-8 space-y-2 text-xs">
       <h3 className="text-sm font-medium">Newsletter</h3>
       <p>Coming Soon...</p>
-    </div>
   </div>
 );
 
