@@ -3,9 +3,11 @@ import { NavLink } from "react-router-dom";
 export default function MobileTabs({
   navigation,
   className,
+  onNavigate,
 }: {
   navigation: { name: string; href: string }[];
   className: string;
+  onNavigate: () => void;
 }) {
   return (
     <nav className={className}>
@@ -14,6 +16,7 @@ export default function MobileTabs({
           <NavLink
             key={tab.name}
             to={tab.href}
+            onClick={onNavigate}
             className={({ isActive }: { isActive: boolean }) =>
               isActive
                 ? "block border-l-4 border-indigo-500 bg-indigo-50 py-2 pl-3 pr-4 text-base font-medium text-indigo-700"

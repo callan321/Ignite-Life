@@ -51,6 +51,7 @@ export default function Header() {
       {isOpen && (
         <MobileTabs
           navigation={navigation}
+          onNavigate={toggleMenu}
           className={"space-y-1 pb-4 pt-2 sm:hidden"}
         />
       )}
