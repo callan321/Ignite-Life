@@ -29,11 +29,9 @@ The website is currently under production and can be found here:
 
 ##### Header
 
-- [ ] Logo
-- [ ] Navigation Links
-- [ ] Search Bar
-- [ ] User Profile/Account Access
-- [ ] Language Selector (if applicable)
+- [x] Logo
+- [x] Navigation Links
+- [x] Heading
 
 - [ ] Responsive
 - [ ] Styles
@@ -51,8 +49,8 @@ The website is currently under production and can be found here:
 - [ ] Social Media
 - [ ] Directions Button
 - [ ] Maps
-- [ ] Newsletter
-- [ ] Copyright
+- [x] Newsletter
+- [x] Copyright
 
 - [ ] Responsive
 - [ ] Styles
@@ -63,6 +61,7 @@ The website is currently under production and can be found here:
 - [ ] Test - DevTools
 
 #### Pages
+- [ ] Testimonials
 
 ##### Home
 
@@ -83,11 +82,9 @@ The website is currently under production and can be found here:
 
 ##### About
 
-- [ ] Company History
 - [ ] Mission and Vision
-- [ ] Team Members
 - [ ] Company Values
-- [ ] Contact Information
+- [ ] Testimonials
 
 - [ ] Responsive
 - [ ] Styles
@@ -100,26 +97,11 @@ The website is currently under production and can be found here:
 ##### Book
 
 - [ ] Booking Form
-- [ ] Service List
 - [ ] Pricing Information
-- [ ] Appointment Calendar
 - [ ] Customer Testimonials
-
-- [ ] Responsive
-- [ ] Styles
-- [ ] Accessibility
-- [ ] Semantic and Meta
-- [ ] Animations
-- [ ] Performance and SEO
-- [ ] Test - DevTools
-
-##### Treatments and Groups
-
 - [ ] List of Treatments
 - [ ] Group Sessions Information
-- [ ] Detailed Descriptions
-- [ ] Booking Options
-- [ ] Testimonials
+- [ ] Descriptions
 
 - [ ] Responsive
 - [ ] Styles
@@ -128,6 +110,8 @@ The website is currently under production and can be found here:
 - [ ] Animations
 - [ ] Performance and SEO
 - [ ] Test - DevTools
+
+
 
 ### Release 2: Booking Management System with Authentication and Emails
 
