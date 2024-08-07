@@ -33,6 +33,7 @@ export const address = {
   street: "10, Granite St",
   city: "Lennox Head",
   state: "New South Whales",
+  postcode: "2478",
   href: "https://www.google.com/maps/dir/?api=1&destination=10+Granite+St,+Lennox+Head,+NSW,+Australia",
 };
 
