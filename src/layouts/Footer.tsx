@@ -53,24 +53,24 @@ const Hours = () => (
 );
 
 const ContactDetails = () => (
-  <div className="flex w-full flex-col pl-8 space-y-2 text-xs ">
-      <h3 className="text-sm font-medium">Contact details</h3>
-      <BlueLink name={phone.phone} href={phone.href} text={"P"} />
-      <BlueLink name={email.email} href={email.href} text={"E"} />
-      <div className="space-y-1">
-        <p>{`${address.street}, ${address.city}`}</p>
-        <p>{`${address.state}`}</p>
-        <p>
-          <BlueLink href={address.href} name={"Get Directions"} />
-        </p>
-      </div>
+  <div className="flex w-full flex-col space-y-2 pl-8 text-xs">
+    <h3 className="text-sm font-medium">Contact details</h3>
+    <BlueLink name={phone.phone} href={phone.href} text={"P"} />
+    <BlueLink name={email.email} href={email.href} text={"E"} />
+    <div className="space-y-1">
+      <p>{`${address.street}, ${address.city}`}</p>
+      <p>{`${address.state}`}</p>
+      <p>
+        <BlueLink href={address.href} name={"Get Directions"} />
+      </p>
+    </div>
   </div>
 );
 
 const Newsletter = () => (
-  <div className="flex w-full flex-col pl-8 space-y-2 text-xs">
-      <h3 className="text-sm font-medium">Newsletter</h3>
-      <p>Coming Soon...</p>
+  <div className="flex w-full flex-col space-y-2 pl-8 text-xs">
+    <h3 className="text-sm font-medium">Newsletter</h3>
+    <p>Coming Soon...</p>
   </div>
 );
 
