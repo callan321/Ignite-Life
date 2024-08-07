@@ -1,42 +1,9 @@
 import { address, email, hours, phone } from "../config.ts";
-import { Link } from "react-router-dom";
-
-function BlueLink({
-  name,
-  href,
-  text,
-}: {
-  name: string;
-  href: string;
-  text?: string;
-}) {
-  return (
-    <Link to={href} target="_blank" rel="noopener noreferrer">
-      <span className="font-normal">
-        {`${text}:   `}
-        <span className="text-blue-500 hover:text-blue-600 hover:underline">
-          {name}
-        </span>
-      </span>
-    </Link>
-  );
-}
+import { Slogan } from "../components/Slogan.tsx";
+import BlueLink from "../components/BlueLink.tsx";
 
 const DividingLine = () => (
-  <div className="w-3/4 p-8">
-    <hr className="border-b-0 border-gray-300" />
-  </div>
-);
-
-const Slogan = () => (
-  <div className="flex h-36 items-center justify-center overflow-hidden">
-    <img
-      src="/slogan.png"
-      alt="Ignite Life Slogan"
-      className="w-44 scale-150"
-      loading="lazy"
-    />
-  </div>
+  <div className="m-8 w-3/4 border-b border-gray-300"></div>
 );
 
 const Hours = () => (
@@ -55,15 +22,15 @@ const Hours = () => (
 const ContactDetails = () => (
   <div className="flex w-full flex-col space-y-2 pl-8 text-xs">
     <h3 className="text-sm font-medium">Contact details</h3>
-    <BlueLink name={phone.phone} href={phone.href} text={"P"} />
-    <BlueLink name={email.email} href={email.href} text={"E"} />
+    <BlueLink name={phone.phone} href={phone.href} />
+    <BlueLink name={email.email} href={email.href} />
+    <h3 className="text-sm font-medium">Address</h3>
     <div className="space-y-1">
-      <p>{`${address.street}, ${address.city}`}</p>
+      <p>{`${address.street},`}</p>
+      <p>{`${address.city},`}</p>
       <p>{`${address.state}`}</p>
-      <p>
-        <BlueLink href={address.href} name={"Get Directions"} />
-      </p>
     </div>
+    <BlueLink href={address.href} name={"Get Directions"} />
   </div>
 );
 
@@ -73,6 +40,16 @@ const Newsletter = () => (
     <p>Coming Soon...</p>
   </div>
 );
+
+function Copyright({ className }: { className: string }) {
+  return (
+    <div className={className}>
+      <span className=" flex items-center justify-center text-xs leading-5 text-gray-500">
+        &copy; Ignite Life Bowen Therapy
+      </span>
+    </div>
+  );
+}
 
 export default function Footer() {
   return (
@@ -90,11 +67,7 @@ export default function Footer() {
         </div>
       </div>
       <DividingLine />
-      <div className="mb-16 w-full">
-        <p className="text-center text-xs leading-5 text-gray-500">
-          &copy; Ignite Life Bowen Therapy
-        </p>
-      </div>
+      <Copyright className="mb-16 w-full" />
     </footer>
   );
 }
