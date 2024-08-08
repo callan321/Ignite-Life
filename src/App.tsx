@@ -3,6 +3,7 @@ import MainLayout from "./layouts/MainLayout.tsx";
 import Home from "./pages/Home.tsx";
 import About from "./pages/About.tsx";
 import Book from "./pages/Book.tsx";
+import Contact from "./pages/Contact.tsx";
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/Book" element={<Book />} />
+        <Route path="/contact" element={<Contact />} />
       </Route>
     </Routes>
   );
