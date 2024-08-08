@@ -1,10 +1,18 @@
 import { treaments } from "../config.ts";
-import BookMeta from "../meta/BookMeta.tsx";
+import Meta from "../utils/Meta.tsx";
 
 export default function Book() {
   return (
     <>
-      <BookMeta />
+      <Meta
+        title={"Ignite Life - Book a Session"}
+        description={
+          "Book a session with Ignite Life to experience the transformative benefits of Bowen Therapy. Our holistic treatments promote relaxation, alleviate pain, and enhance overall well-being."
+        }
+        keywords={
+          "Book Bowen Therapy, holistic healing sessions, pain relief appointment, relaxation therapy, Ignite Life booking"
+        }
+      />
       <div className="bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <h2 className="mx-auto mt-2 max-w-4xl text-4xl font-bold tracking-tight text-gray-900 sm:text-center sm:text-5xl">
