@@ -44,3 +44,33 @@ export const phone = {
   phone: "0490 034 249",
   href: "tel:0490 034 249",
 };
+
+export const treaments = [
+  {
+    name: "Baby Bowen",
+    id: "under 3s",
+    href: "https://book.squareup.com/appointments/occ9h4nxjya007/location/LAD6P3NX6CZA4/services/HNVJ3IH4QUG3JOU2DQTO2ENF",
+    price: "$40",
+    duration: "20 mins",
+    description:
+      "Extremely gentle therapy aiding your baby with, feeding problems, projectile vomiting, colic, asthma symptoms or general distress.",
+  },
+  {
+    name: "Children",
+    id: "ages 3-12",
+    href: "https://book.squareup.com/appointments/occ9h4nxjya007/location/LAD6P3NX6CZA4/services/DNIKMNGGLBTZ4TEVVKOYGAHQ",
+    price: "$65",
+    duration: "30 mins",
+    description:
+      "A gentle non-invasive holistic treatment that and aims to treat the cause of problems, relieve pain, aids in healing injuries, respiratory problems, bed wetting and more.",
+  },
+  {
+    name: "Adult",
+    id: "",
+    href: "https://book.squareup.com/appointments/occ9h4nxjya007/location/LAD6P3NX6CZA4/services/G4GQM7NM5C2CYHKDBJBBJOWO",
+    price: "$85",
+    duration: "1 hr",
+    description:
+      "Bowen Therapy is a pleasant and healing treatment, you will thoroughly enjoy. You will leave your treatment feeling pain relief, relaxed and blissful",
+  },
+];

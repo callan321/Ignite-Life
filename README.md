@@ -61,6 +61,7 @@ The website is currently under production and can be found here:
 - [ ] Test - DevTools
 
 #### Pages
+
 - [ ] Testimonials
 
 ##### Home
@@ -111,8 +112,6 @@ The website is currently under production and can be found here:
 - [ ] Performance and SEO
 - [ ] Test - DevTools
 
-
-
 ### Release 2: Booking Management System with Authentication and Emails
 
 - Implement user authentication with Supabase
@@ -133,4 +132,3 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-

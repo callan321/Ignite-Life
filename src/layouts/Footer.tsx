@@ -2,10 +2,6 @@ import { address, email, hours, phone } from "../config.ts";
 import { Slogan } from "../components/Slogan.tsx";
 import BlueLink from "../components/BlueLink.tsx";
 
-const DividingLine = () => (
-  <div className="m-8 w-3/4 border-b border-gray-300"></div>
-);
-
 const Hours = () => (
   <div className="flex w-full flex-col pl-8">
     <div className="space-y-0.5">
@@ -44,7 +40,7 @@ const Newsletter = () => (
 function Copyright({ className }: { className: string }) {
   return (
     <div className={className}>
-      <span className=" flex items-center justify-center text-xs leading-5 text-gray-500">
+      <span className="flex items-center justify-center text-xs leading-5 text-gray-500">
         &copy; Ignite Life Bowen Therapy
       </span>
     </div>
@@ -57,16 +53,15 @@ export default function Footer() {
       className="flex w-full flex-col items-center justify-center bg-white"
       role="contentinfo"
     >
-      <DividingLine />
       <div className="lg:w-3/4">
-        <div className="mx-auto grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto grid grid-cols-1 gap-4 divide-x divide-gray-100 sm:grid-cols-2 lg:grid-cols-4">
           <Slogan />
           <Hours />
           <ContactDetails />
           <Newsletter />
         </div>
       </div>
-      <DividingLine />
+
       <Copyright className="mb-16 w-full" />
     </footer>
   );

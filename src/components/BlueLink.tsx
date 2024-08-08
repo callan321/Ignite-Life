@@ -9,9 +9,9 @@ export default function BlueLink({
 }) {
   return (
     <Link to={href} target="_blank" rel="noopener noreferrer">
-        <span className="text-blue-500 hover:text-blue-600 hover:underline font-normal">
-          {name}
-        </span>
+      <span className="font-normal text-blue-500 hover:text-blue-600 hover:underline">
+        {name}
+      </span>
     </Link>
   );
 }
