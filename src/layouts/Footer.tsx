@@ -1,5 +1,5 @@
 import { address, email, facebook, instagram, phone, copyright } from "../config.ts";
-import { Slogan } from "../components/Slogan.tsx";
+
 import BlueLink from "../components/BlueLink.tsx";
 import { Facebook, Instagram } from "../components/Icons.tsx";
 import { Link } from "react-router-dom";
@@ -8,6 +8,20 @@ import { ReactNode } from "react";
 interface FooterSectionProps {
   title: string;
   children: ReactNode;
+}
+
+function Slogan () {
+  return (
+    <div className="flex  w-full items-center justify-center overflow-hidden">
+      <img
+        src="/slogan.png"
+        alt="Ignite Life Slogan"
+
+        className=" h-96 w-96 object-cover"
+        loading="lazy"
+      />
+    </div>
+  );
 }
 
 function FooterSection({ title, children }: FooterSectionProps) {
@@ -21,6 +35,7 @@ function FooterSection({ title, children }: FooterSectionProps) {
 
 function Address() {
   return (
+    <div className="sm:pt-24 xl:pl-8 ">
     <FooterSection title="Address">
       <div className="space-y-1">
         <p>{`${address.street},`}</p>
@@ -29,11 +44,13 @@ function Address() {
       </div>
       <BlueLink href={address.href} name={"Get Directions"} />
     </FooterSection>
+    </div>
   );
 }
 
 function ContactDetails() {
   return (
+    <div className="xl:pt-24 lg:pl-24 xl:pl-0">
     <FooterSection title="Contact details">
       <BlueLink name={phone.phone} href={phone.href} />
       <BlueLink name={email.email} href={email.href} />
@@ -46,14 +63,17 @@ function ContactDetails() {
         </Link>
       </div>
     </FooterSection>
+    </div>
   );
 }
 
 function Newsletter() {
   return (
+    <div className="xl:pt-24">
     <FooterSection title="Newsletter">
       <p>Coming Soon...</p>
     </FooterSection>
+    </div>
   );
 }
 
@@ -70,8 +90,8 @@ export default function Footer() {
       className="flex w-full flex-col items-center justify-center bg-white"
       role="contentinfo"
     >
-      <div className="lg:w-3/4">
-        <div className="mx-auto grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="lg:w-11/12">
+        <div className="mx-auto grid grid-cols-1 gap-x-4 sm:gap-y-0 gap-y-8 sm:grid-cols-2 xl:grid-cols-4 ">
           {sections.map((section) => (
             <div key={section.key}>{section.component}</div>
           ))}

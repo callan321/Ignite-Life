@@ -58,7 +58,7 @@ export default function Book() {
           <h3 className="mx-auto mt-2 max-w-4xl pt-16 text-3xl font-bold tracking-tight text-gray-900 sm:text-center sm:text-4xl">
             Group Sessions
           </h3>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-10 text-gray-600 sm:text-center">
+          <p className="mx-auto bg-ig mt-6 max-w-2xl text-lg leading-10 text-gray-600 sm:text-center">
             <b>Wednesday 9.30am</b>
             <br />
             <i>Specialised Stress and Anxiety Group.</i>
