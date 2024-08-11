@@ -1,9 +1,16 @@
 export default function ContactForm() {
+
   return (
-    <form action="#" method="POST">
+    <form
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+    >
       <div className="max-w-xl lg:mr-0 lg:max-w-lg">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
+
             <label
               htmlFor="name"
               className="block text-sm font-semibold leading-6 text-gray-900"
