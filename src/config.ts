@@ -71,3 +71,5 @@ export const treatments = [
       "Bowen Therapy is a pleasant and healing treatment, you will thoroughly enjoy. You will leave your treatment feeling pain relief, relaxed and blissful",
   },
 ];
+
+export const copyright = "\u00A9 Ignite Life Bowen Therapy"
