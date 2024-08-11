@@ -5,7 +5,6 @@ export default function ContactForm() {
       name="contact"
       method="POST"
       data-netlify="true"
-      data-netlify-honeypot="bot-field"
     >
       <div className="max-w-xl lg:mr-0 lg:max-w-lg">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
