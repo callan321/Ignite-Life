@@ -1,7 +1,6 @@
 export const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  { name: "Book", href: "https://ignite-life-bowen-therapy.square.site" },
   { name: "Treatments & Groups", href: "/book" },
   { name: "Contact", href: "/contact" },
 ];
@@ -18,12 +17,12 @@ export const hours = [
 export const facebook = {
   name: "Facebook",
   href: "https://www.facebook.com/ignitelifehealing/",
-}
+};
 
 export const instagram = {
   name: "Instagram",
   href: "https://www.instagram.com/ignite.life_bowen.therapy/",
-}
+};
 
 export const address = {
   street: "10, Granite St",
@@ -42,8 +41,6 @@ export const phone = {
   phone: "0490 034 249",
   href: "tel:0490 034 249",
 };
-
-
 
 export const treatments = [
   {

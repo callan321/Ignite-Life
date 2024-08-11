@@ -1,7 +1,10 @@
-import { Email, Facebook, Instagram, Location, Phone } from "../components/Icons.tsx";
-import { address, email, facebook, hours, instagram, phone } from "../config.ts";
-import { Link } from "react-router-dom";
+import { Email, Facebook, Instagram, Phone } from "../components/Icons.tsx";
+import { email, facebook, hours, instagram, phone } from "../config.ts";
 import Meta from "../utils/Meta.tsx";
+import IconList from "../components/IconList.tsx";
+import DoubleList from "../components/DoubleList.tsx";
+import ContactForm from "../components/ContactForm.tsx";
+import Container from "../components/Container.tsx";
 
 const contactDetails = [
   {
@@ -24,136 +27,11 @@ const contactDetails = [
   },
   {
     type: "Instagram",
-    icon: < Instagram />,
+    icon: <Instagram />,
     href: instagram.href,
     value: <>{instagram.name}</>,
   },
 ];
-
-const Hours = () => (
-  <div className="flex w-full flex-col pl-8">
-    <div className="space-y-0.5">
-      {hours.map((item) => (
-        <div key={item.day} className="text-left text-xs">
-          <div className="font-medium">{item.day}</div>
-          <div>{item.hours}</div>
-        </div>
-      ))}
-    </div>
-  </div>
-);
-
-const ContactInfo = () => {
-  return (
-    <dl className="mt-10 space-y-4 text-base leading-7 text-gray-600">
-      {contactDetails.map((detail, index) => (
-        <div key={index} className="flex gap-x-4">
-          <dt className="flex-none">
-            <Link to={detail.href}>
-            <span className="sr-only">{detail.type}</span>
-            {detail.icon}
-            </Link>
-          </dt>
-          <dd>
-            <Link className="hover:text-gray-900" to={detail.href}>
-              {" "}
-              {detail.value}
-            </Link>
-          </dd>
-        </div>
-      ))}
-    </dl>
-  );
-};
-
-const ContactForm = () => (
-  <form
-    action="#"
-    method="POST"
-    className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"
-  >
-    <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
-      <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-        <div>
-          <label
-            htmlFor="name"
-            className="block text-sm font-semibold leading-6 text-gray-900"
-          >
-            Name
-          </label>
-          <div className="mt-2.5">
-            <input
-              id="name"
-              name="name"
-              type="text"
-              autoComplete="name"
-              className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-            />
-          </div>
-        </div>
-        <div>
-          <label
-            htmlFor="phone-number"
-            className="block text-sm font-semibold leading-6 text-gray-900"
-          >
-            Phone Number
-          </label>
-          <div className="mt-2.5">
-            <input
-              id="phone-number"
-              name="phone-number"
-              type="tel"
-              autoComplete="tel"
-              className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-            />
-          </div>
-        </div>
-        <div className="sm:col-span-2">
-          <label
-            htmlFor="email"
-            className="block text-sm font-semibold leading-6 text-gray-900"
-          >
-            Email
-          </label>
-          <div className="mt-2.5">
-            <input
-              id="email"
-              name="email"
-              type="email"
-              autoComplete="email"
-              className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-            />
-          </div>
-        </div>
-        <div className="sm:col-span-2">
-          <label
-            htmlFor="message"
-            className="block text-sm font-semibold leading-6 text-gray-900"
-          >
-            Message
-          </label>
-          <div className="mt-2.5">
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                    defaultValue={""}
-                  />
-          </div>
-        </div>
-      </div>
-      <div className="mt-8 flex justify-end">
-        <button
-          type="submit"
-          className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-        >
-          Send message
-        </button>
-      </div>
-    </div>
-  </form>
-)
 
 export default function Contact() {
   return (
@@ -167,10 +45,9 @@ export default function Contact() {
           "Contact Ignite Life, Bowen Therapy inquiries, get in touch, contact form, phone, email, social media"
         }
       />
-    <div className="relative isolate bg-white">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
-        <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
-          <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
+      <div className="relative isolate bg-white">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
+          <Container>
             <h2 className="text-3xl font-bold tracking-tight text-gray-900">
               Get in touch
             </h2>
@@ -178,23 +55,36 @@ export default function Contact() {
               Have a question about bowen therapy or a general inquiry? Leave us
               a message or contact us on social media.
             </p>
-            <ContactInfo />
-          </div>
-        </div>
-        <ContactForm />
-        <Hours/>
-        <div>
-
-          <Location/>
-          <br/>
-          {address.street},
-          <br />
-          {address.city}, {address.postcode},
-          <br />
-          {address.state}
+            <div className="pt-8">
+              <IconList items={contactDetails} />
+            </div>
+          </Container>
+          <Container>
+            <ContactForm />
+          </Container>
+          <Container>
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+              Open Hours
+            </h2>
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              Curious about our open hours? Check our schedule below, and reach
+              out if you need any additional information.
+            </p>
+            <div className="pt-8">
+              <DoubleList items={hours.map(({ day, hours }) => [day, hours])} />
+            </div>
+          </Container>
+          <Container>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3495.863749618485!2d153.5940622!3d-28.813133900000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b907e173f2167ab%3A0xf57717e990379006!2s10%20Granite%20St%2C%20Lennox%20Head%20NSW%202478!5e0!3m2!1sen!2sau!4v1723341407364!5m2!1sen!2sau"
+              width="600"
+              height="450"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </Container>
         </div>
       </div>
-    </div>
     </>
   );
 }
