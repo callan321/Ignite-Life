@@ -1,9 +1,9 @@
-import { Key, ReactElement, ReactNode } from "react";
+import { Key, ReactNode } from "react";
 import { Link } from "react-router-dom";
 
 interface IconListItem {
   type: string;
-  icon: ReactElement;
+  icon: ReactNode;
   href: string;
   value: ReactNode;
 }
