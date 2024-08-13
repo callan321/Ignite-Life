@@ -1,12 +1,12 @@
 import { Outlet } from "react-router-dom";
 import Footer from "./Footer";
-import Header from "./Header.tsx";
+import Header from "../components/sections/Header.tsx";
 
 export default function MainLayout() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-grow">
+      <main className="-m-16 flex-grow">
         <Outlet />
       </main>
       <Footer />

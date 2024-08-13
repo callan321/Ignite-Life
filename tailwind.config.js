@@ -5,6 +5,10 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        'great-vibes': ['Great Vibes', 'serif'],
+      },
+
       colors: {
         ignite: {
           brown: "#bd9479",

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import "./herosectionstyles.css";
+import styles from "./herosectionstyles.module.css";
 
 interface HeroSlideProps {
   title: string;
@@ -28,32 +28,38 @@ function HeroSlide({
   ImagePrev,
 }: HeroSlideProps) {
   return (
-    <div className="relative isolate flex h-[24rem] items-center justify-center overflow-hidden pt-14 md:h-[36rem] lg:h-[48rem]">
+    <div className="relative isolate flex h-[36rem] items-center justify-center overflow-hidden md:h-[44rem] lg:h-[56rem]">
+      {/* Current Image */}
       <img
         alt=""
         src={ImageNow}
-        className="long-slide-in absolute inset-0 -z-10 h-full w-full object-cover"
+        className={`${styles["long-slide-in"]} absolute inset-0 -z-10 h-full w-full object-cover`}
       />
 
       <img
         alt=""
         src={ImagePrev}
-        className="long-slide-out absolute inset-0 -z-20 h-full w-full object-cover"
+        className={`${styles["long-slide-out"]} absolute inset-0 -z-20 h-full w-full object-cover`}
       />
 
       {/* Background Overlay */}
       <div className="absolute inset-0 -z-10 bg-black opacity-25"></div>
 
-      <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+      {/* Main Content */}
+      <div className={`${styles["late-fade-out"]} mx-auto max-w-2xl py-32 sm:py-48 lg:py-56`}>
         <div className="text-center">
-          <h1 className="shadow-text hero-in text-4xl font-bold tracking-tight text-white sm:text-6xl">
+          <h1
+            className={`${styles["shadow-text"]} ${styles["hero-in"]} text-4xl font-bold tracking-tight text-white sm:text-6xl`}>
             {title}
           </h1>
-          <p className="shadow-text hero-in-d1 mt-6 text-xl font-medium leading-8 text-gray-100">
+
+          <p
+            className={`${styles["shadow-text"]} ${styles["hero-in-d1"]} mt-6 text-xl font-medium leading-8 text-gray-100`}>
             {content}
           </p>
-          <div className="hero-in-d2 mt-6 flex items-center justify-center gap-x-6">
-            <Link to={href} className="hero-button">
+
+          <div className={`${styles["hero-in-d2"]} mt-6 flex items-center justify-center gap-x-6`}>
+            <Link to={href} className={styles["hero-button"]}>
               {button}
             </Link>
           </div>
@@ -64,8 +70,8 @@ function HeroSlide({
 }
 
 export default function HeroSection({
-  sections,
-}: {
+                                      sections
+                                    }: {
   sections: HeroSectionProps[];
 }) {
   const [currentSection, setCurrentSection] = useState(0);

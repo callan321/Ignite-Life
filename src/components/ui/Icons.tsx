@@ -5,7 +5,7 @@ function Icon({ d, viewBox }: { d: string; viewBox: string }) {
       height="24px"
       viewBox={viewBox}
       width="24px"
-      fill="#5f6368"
+      fill="currentColor"
       aria-hidden="true"
     >
       <path d={d} />

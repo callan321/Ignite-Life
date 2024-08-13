@@ -1,5 +1,5 @@
 import Meta from "../utils/Meta.tsx";
-import HeroSection from "../components/page/HeroSection.tsx";
+import HeroSection from "../components/sections/HeroSection.tsx";
 import { heroSections } from "../config.ts";
 
 export default function Home() {
