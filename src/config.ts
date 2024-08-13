@@ -73,4 +73,4 @@ export const treatments = [
   },
 ];
 
-export const copyright = "\u00A9 Ignite Life Bowen Therapy"
+export const copyright = "\u00A9 Ignite Life Bowen Therapy";
