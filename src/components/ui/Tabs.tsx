@@ -27,10 +27,10 @@ export function Tabs({
 }
 
 export function MobileTabs({
-                                     navigation,
-                                     className,
-                                     onNavigate,
-                                   }: {
+  navigation,
+  className,
+  onNavigate,
+}: {
   navigation: { name: string; href: string }[];
   className: string;
   onNavigate: () => void;

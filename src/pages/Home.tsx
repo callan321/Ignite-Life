@@ -15,7 +15,7 @@ export default function Home() {
         }
       />
       <div className="flex w-full flex-col">
-        <HeroSection  sections={heroSections}/>
+        <HeroSection sections={heroSections} />
       </div>
     </>
   );

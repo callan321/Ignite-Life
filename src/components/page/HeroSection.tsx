@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import './herosectionstyles.css';
-
+import "./herosectionstyles.css";
 
 interface HeroSlideProps {
   title: string;
@@ -17,7 +16,7 @@ interface HeroSectionProps {
   content: string;
   button: string;
   href: string;
-  backgroundImage  : string;
+  backgroundImage: string;
 }
 
 function HeroSlide({
@@ -29,7 +28,6 @@ function HeroSlide({
   ImagePrev,
 }: HeroSlideProps) {
   return (
-    <>
     <div className="relative isolate flex h-[24rem] items-center justify-center overflow-hidden pt-14 md:h-[36rem] lg:h-[48rem]">
       <img
         alt=""
@@ -62,11 +60,14 @@ function HeroSlide({
         </div>
       </div>
     </div>
-    </>
   );
 }
 
-export default function HeroSection({ sections } : {sections: HeroSectionProps[]}) {
+export default function HeroSection({
+  sections,
+}: {
+  sections: HeroSectionProps[];
+}) {
   const [currentSection, setCurrentSection] = useState(0);
   const [previousSection, setPreviousSection] = useState(sections.length - 1); // Start with the last section
 
@@ -79,7 +80,7 @@ export default function HeroSection({ sections } : {sections: HeroSectionProps[]
     }, 15000);
 
     return () => clearInterval(interval);
-  }, [currentSection]);
+  }, [currentSection, sections.length]);
 
   return (
     <HeroSlide

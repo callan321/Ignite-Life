@@ -90,5 +90,4 @@ export const heroSections = [
   },
 ];
 
-
 export const copyright = "\u00A9 Ignite Life Bowen Therapy";
