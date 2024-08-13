@@ -73,4 +73,22 @@ export const treatments = [
   },
 ];
 
+export const heroSections = [
+  {
+    title: "Ignite Life",
+    content: "Feel Better - Heal Better",
+    button: "Book Now!",
+    href: "https://ignite-life-bowen-therapy.square.site",
+    backgroundImage: "/hero1.jpg",
+  },
+  {
+    title: "Bowen Therapy",
+    content: "Discover the Transformative Benefits",
+    button: "Learn More",
+    href: "https://ignite-life-bowen-therapy.square.site",
+    backgroundImage: "/hero2.jpg",
+  },
+];
+
+
 export const copyright = "\u00A9 Ignite Life Bowen Therapy";

@@ -1,42 +1,35 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import './herosectionstyles.css';
 
-const sections = [
-  {
-    title: "Ignite Life",
-    p1: "Feel Better - Heal Better",
-    button: "Book Now!",
-    href: "https://ignite-life-bowen-therapy.square.site",
-    backgroundImage: "/hero1.jpg",
-  },
-  {
-    title: "Bowen Therapy",
-    p1: "Discover the Transformative Benefits",
 
-    button: "Learn More",
-    href: "https://ignite-life-bowen-therapy.square.site",
-    backgroundImage: "/hero2.jpg",
-  },
-];
-
-function HeroSlide({
-  title,
-  p1,
-
-  button,
-  href,
-  ImageNow,
-  ImagePrev,
-}: {
+interface HeroSlideProps {
   title: string;
-  p1: string;
-
+  content: string;
   button: string;
   href: string;
   ImageNow: string;
   ImagePrev: string;
-}) {
+}
+
+interface HeroSectionProps {
+  title: string;
+  content: string;
+  button: string;
+  href: string;
+  backgroundImage  : string;
+}
+
+function HeroSlide({
+  title,
+  content,
+  button,
+  href,
+  ImageNow,
+  ImagePrev,
+}: HeroSlideProps) {
   return (
+    <>
     <div className="relative isolate flex h-[24rem] items-center justify-center overflow-hidden pt-14 md:h-[36rem] lg:h-[48rem]">
       <img
         alt=""
@@ -59,7 +52,7 @@ function HeroSlide({
             {title}
           </h1>
           <p className="shadow-text hero-in-d1 mt-6 text-xl font-medium leading-8 text-gray-100">
-            {p1}
+            {content}
           </p>
           <div className="hero-in-d2 mt-6 flex items-center justify-center gap-x-6">
             <Link to={href} className="hero-button">
@@ -69,10 +62,11 @@ function HeroSlide({
         </div>
       </div>
     </div>
+    </>
   );
 }
 
-export default function HeroSection() {
+export default function HeroSection({ sections } : {sections: HeroSectionProps[]}) {
   const [currentSection, setCurrentSection] = useState(0);
   const [previousSection, setPreviousSection] = useState(sections.length - 1); // Start with the last section
 
@@ -91,7 +85,7 @@ export default function HeroSection() {
     <HeroSlide
       key={currentSection}
       title={sections[currentSection].title}
-      p1={sections[currentSection].p1}
+      content={sections[currentSection].content}
       button={sections[currentSection].button}
       href={sections[currentSection].href}
       ImageNow={sections[currentSection].backgroundImage}
