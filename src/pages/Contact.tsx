@@ -1,9 +1,9 @@
-import { Email, Facebook, Instagram, Phone } from "../components/Icons.tsx";
+import { Email, Facebook, Instagram, Phone } from "../components/ui/Icons.tsx";
 import { email, facebook, hours, instagram, phone } from "../config.ts";
 import Meta from "../utils/Meta.tsx";
-import IconList from "../components/IconList.tsx";
-import DoubleList from "../components/DoubleList.tsx";
-import ContactForm from "../components/ContactForm.tsx";
+import IconList from "../components/ui/IconList.tsx";
+import DoubleList from "../components/ui/DoubleList.tsx";
+import ContactForm from "../components/ui/ContactForm.tsx";
 import { ReactNode } from "react";
 
 interface ContactDetail {

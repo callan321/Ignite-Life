@@ -1,5 +1,5 @@
 import { ChangeEvent, useState } from "react";
-import { supabase } from "../utils/supabaseClient";
+import { supabase } from "../../utils/supabaseClient.ts";
 import { FormEvent } from "react";
 
 export default function ContactForm() {

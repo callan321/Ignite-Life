@@ -7,8 +7,8 @@ import {
   copyright,
 } from "../config.ts";
 
-import BlueLink from "../components/BlueLink.tsx";
-import { Facebook, Instagram } from "../components/Icons.tsx";
+import BlueLink from "../components/ui/BlueLink.tsx";
+import { Facebook, Instagram } from "../components/ui/Icons.tsx";
 import { Link } from "react-router-dom";
 import { ReactNode } from "react";
 

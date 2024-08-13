@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { navigation } from "../config.ts";
-import ToggleButton from "../components/ToggleButton.tsx";
-import { Favicon } from "../components/Icons.tsx";
-import MobileTabs from "../components/MobileTabs.tsx";
-import Tabs from "../components/Tabs.tsx";
+import ToggleButton from "../components/ui/ToggleButton.tsx";
+import { Favicon } from "../components/ui/Icons.tsx";
+import MobileTabs from "../components/ui/MobileTabs.tsx";
+import Tabs from "../components/ui/Tabs.tsx";
 
 function Heading({ className }: { className?: string }) {
   return (
