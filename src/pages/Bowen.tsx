@@ -8,8 +8,6 @@ export default function Bowen() {
         description={"Explaining the wonders of bowen"}
         keywords={"What is Bowen "}
       />
-
-
     </>
   );
 }

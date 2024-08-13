@@ -1,12 +1,7 @@
 import Meta from "../utils/Meta.tsx";
 import HeroSection from "../components/page/HeroSection.tsx";
 
-
-
-
-
 export default function Home() {
-
   return (
     <>
       <Meta
@@ -18,7 +13,6 @@ export default function Home() {
           "Bowen Therapy, holistic healing, pain relief, relaxation, overall well-being, natural health, Ignite Life"
         }
       />
-
       <div className="flex w-full flex-col">
         <HeroSection />
       </div>

@@ -11,8 +11,7 @@ const sections = [
   },
   {
     title: "Bowen Therapy",
-    p1:
-      "Discover the Transformative Benefits",
+    p1: "Discover the Transformative Benefits",
 
     button: "Learn More",
     href: "https://ignite-life-bowen-therapy.square.site",
@@ -21,14 +20,14 @@ const sections = [
 ];
 
 function HeroSlide({
-                     title,
-                     p1,
+  title,
+  p1,
 
-                     button,
-                     href,
-                     ImageNow,
-                     ImagePrev
-                   } :{
+  button,
+  href,
+  ImageNow,
+  ImagePrev,
+}: {
   title: string;
   p1: string;
 
@@ -38,46 +37,37 @@ function HeroSlide({
   ImagePrev: string;
 }) {
   return (
-    <div className="relative isolate flex items-center justify-center overflow-hidden pt-14 lg:h-[48rem] md:h-[36rem] h-[24rem]">
+    <div className="relative isolate flex h-[24rem] items-center justify-center overflow-hidden pt-14 md:h-[36rem] lg:h-[48rem]">
       <img
         alt=""
         src={ImageNow}
-        className="absolute inset-0 -z-10 h-full w-full object-cover  long-slide-in"
+        className="long-slide-in absolute inset-0 -z-10 h-full w-full object-cover"
       />
 
       <img
         alt=""
         src={ImagePrev}
-        className="absolute inset-0 -z-20 h-full w-full object-cover long-slide-out"
+        className="long-slide-out absolute inset-0 -z-20 h-full w-full object-cover"
       />
 
       {/* Background Overlay */}
-      <div className="absolute inset-0 bg-black opacity-25 -z-10"></div>
+      <div className="absolute inset-0 -z-10 bg-black opacity-25"></div>
 
       <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
         <div className="text-center">
-          <h1
-            className="text-4xl font-bold tracking-tight text-white sm:text-6xl shadow-text hero-in"
-          >
+          <h1 className="shadow-text hero-in text-4xl font-bold tracking-tight text-white sm:text-6xl">
             {title}
           </h1>
-          <p
-            className="mt-6 text-xl leading-8 font-medium text-gray-100 shadow-text hero-in-d1"
-          >
+          <p className="shadow-text hero-in-d1 mt-6 text-xl font-medium leading-8 text-gray-100">
             {p1}
           </p>
-          <div className="mt-6 flex items-center justify-center gap-x-6 hero-in-d2">
-            <Link
-              to={href}
-              className="hero-button"
-
-            >
+          <div className="hero-in-d2 mt-6 flex items-center justify-center gap-x-6">
+            <Link to={href} className="hero-button">
               {button}
             </Link>
           </div>
         </div>
       </div>
-
     </div>
   );
 }
@@ -90,7 +80,7 @@ export default function HeroSection() {
     const interval = setInterval(() => {
       setPreviousSection(currentSection);
       setCurrentSection((prevSection) =>
-        prevSection === sections.length - 1 ? 0 : prevSection + 1
+        prevSection === sections.length - 1 ? 0 : prevSection + 1,
       );
     }, 15000);
 
@@ -109,4 +99,3 @@ export default function HeroSection() {
     />
   );
 }
-
