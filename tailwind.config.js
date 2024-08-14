@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'great-vibes': ['Great Vibes', 'serif'],
+        "great-vibes": ["Great Vibes", "serif"],
       },
 
       colors: {

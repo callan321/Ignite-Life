@@ -12,7 +12,7 @@ export default function ToggleButton({
   return (
     <button
       onClick={onClick}
-      className="group relative inline-flex items-center justify-center rounded-md p-2 bg-transparent"
+      className="group relative inline-flex items-center justify-center rounded-md bg-transparent p-2"
     >
       <span className="absolute -inset-0.5" />
       <span className="sr-only">{description}</span>

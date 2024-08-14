@@ -7,7 +7,7 @@ import styles from "./headerstyles.module.css";
 function Heading({ className }: { className?: string }) {
   return (
     <span
-      className={`text-gold text-4xl font-great-vibes font-medium shadow-text text-gray-100 leading-tight ${className}`}
+      className={`text-gold shadow-text font-great-vibes text-4xl font-medium leading-tight text-gray-100 ${className}`}
     >
       <span>Ignite Life</span>
     </span>
@@ -36,7 +36,8 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-40 w-full bg-transparent ${styles[animationState]     
+      className={`sticky top-0 z-40 w-full bg-transparent ${
+        styles[animationState]
       }`}
     >
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
