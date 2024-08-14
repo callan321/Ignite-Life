@@ -11,6 +11,7 @@ export default {
 
       colors: {
         ignite: {
+          cream: "#ddc1a7",
           brown: "#bd9479",
         },
       },

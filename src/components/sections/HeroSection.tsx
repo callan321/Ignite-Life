@@ -28,7 +28,8 @@ function HeroSlide({
   ImagePrev,
 }: HeroSlideProps) {
   return (
-    <div className="relative isolate flex h-[36rem] items-center justify-center overflow-hidden md:h-[44rem] lg:h-[56rem]">
+    <div className="relative isolate flex h-[36rem] items-center justify-center bg-ignite-cream overflow-hidden md:h-[44rem] lg:h-[56rem]"
+    >
       {/* Current Image */}
       <img
         alt=""
@@ -75,7 +76,7 @@ export default function HeroSection({
   sections: HeroSectionProps[];
 }) {
   const [currentSection, setCurrentSection] = useState(0);
-  const [previousSection, setPreviousSection] = useState(sections.length - 1); // Start with the last section
+  const [previousSection, setPreviousSection] = useState<number | null>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -96,7 +97,7 @@ export default function HeroSection({
       button={sections[currentSection].button}
       href={sections[currentSection].href}
       ImageNow={sections[currentSection].backgroundImage}
-      ImagePrev={sections[previousSection].backgroundImage}
+      ImagePrev={previousSection !== null ? sections[previousSection].backgroundImage : ""}
     />
   );
 }
