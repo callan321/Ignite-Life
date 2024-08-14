@@ -1,7 +1,7 @@
 @keyframes fadeInSlideDown {
   0% {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-30px);
   }
   100% {
     opacity: 1;
@@ -9,47 +9,42 @@
   }
 }
 
-@keyframes fadeOutSlideUp {
+@keyframes fadeInSlideUp {
   0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes fadeInBackground {
+  0% {
+    background-color: rgba(116, 94, 77, 0);
+  }
   100% {
-    opacity: 0;
-    transform: translateY(-20px);
+    background-color: rgba(116, 94, 77, 0.8);
   }
 }
 
-.fade-in {
-  animation: fadeInSlideDown 0.5s ease-out forwards;
+.fade-in-below {
+  animation: fadeInSlideUp 1s ease forwards, fadeInBackground 1s ease-in forwards;
+  animation-delay: 0s, 0.5s;
 }
 
-.fade-in-slow {
-  animation: fadeInSlideDown 2s ease-out forwards;
-}
 
-.fade-out {
-  animation: fadeOutSlideUp 0.5s ease-out forwards;
+.fade-in-top {
+  animation: fadeInSlideDown 1.5s ease forwards;
 }
 
 .tab-active {
-  display: inline-flex;
-  align-items: center;
-  position: relative;
-  padding: 0.25rem;
-  font-size: 1.125em;
-  font-weight: 500;
   color: #d2e3e4;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .tab-inactive {
-  display: inline-flex;
-  align-items: center;
-  position: relative;
-  padding: 0.25rem;
-  font-size: 1.125em;
-  font-weight: 500;
   color: #e5e7eb;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
@@ -67,13 +62,21 @@
   content: "";
   position: absolute;
   left: 0;
-  bottom: -14px;
-  height: 3px;
+  bottom: -16px;
+  height: 2px;
   width: 100%;
   background-color: #d2e3e4;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.5s ease;
+}
+
+.bottom-normal::after {
+  bottom: -24px;
+}
+
+.bottom-solid::after {
+  bottom: 0;
 }
 
 .tab-active::after {

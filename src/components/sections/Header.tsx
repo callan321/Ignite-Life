@@ -16,18 +16,14 @@ function Heading({ className }: { className?: string }) {
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [animationState, setAnimationState] = useState<string>("fade-in-slow");
+  const [isSolid, setIsSolid] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const shutMenu = () => setIsOpen(false);
 
   const handleScroll = () => {
-    if (window.scrollY > 20) {
-      setAnimationState("fade-out");
-    } else {
-      setAnimationState("fade-in");
-    }
-  };
+    (window.scrollY > 100) ? setIsSolid(true) : setIsSolid(false);
+  }
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -36,12 +32,10 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-40 w-full bg-transparent ${
-        styles[animationState]
-      }`}
+      className={`sticky top-0 z-40 w-full ${isSolid ?`${styles['fade-in-below']} shadow-xl` : styles['fade-in-top']  } `}
     >
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div className="relative flex h-16 justify-between pt-14">
+        <div className={`relative flex h-20 justify-between ${isSolid ? 'pt-4' : 'pt-20'}`}>
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <ToggleButton
               isActive={isOpen}
@@ -56,8 +50,10 @@ export default function Header() {
                 <NavLink
                   key={tab.name}
                   to={tab.href}
-                  className={({ isActive }: { isActive: boolean }) =>
-                    isActive ? styles["tab-active"] : styles["tab-inactive"]
+                  className={({ isActive }) =>
+                    `${isActive ? styles["tab-active"] : styles["tab-inactive"]} ${
+                      isSolid ? styles["bottom-solid"] : styles["bottom-normal"]
+                    } inline-flex items-center relative p-1 text-lg font-medium`
                   }
                 >
                   {tab.name}

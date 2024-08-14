@@ -13,6 +13,7 @@ export default {
         ignite: {
           cream: "#ddc1a7",
           brown: "#bd9479",
+          dark: "#745e4d",
         },
       },
     },
