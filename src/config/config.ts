@@ -1,11 +1,3 @@
-export const navigation = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Bowen", href: "/bowen" },
-  { name: "Book", href: "/book" },
-  { name: "Contact", href: "/contact" },
-];
-
 export const hours = [
   { day: "Monday", hours: "9:00 am - 5:00 pm" },
   { day: "Tuesday", hours: "3:30 pm - 5:00 pm" },
@@ -13,15 +5,16 @@ export const hours = [
   { day: "Thursday", hours: "12:00 am - 5:00 pm" },
   { day: "Friday", hours: "9:00 am - 5:00 pm" },
   { day: "Saturday", hours: "12:00 am - 4:00 pm" },
+  { day: "Sunday", hours: "Closed" },
 ];
 
 export const facebook = {
-  name: "Facebook",
+  name: "ignitelifehealing",
   href: "https://www.facebook.com/ignitelifehealing/",
 };
 
 export const instagram = {
-  name: "Instagram",
+  name: "ignite.life_bowen.therapy",
   href: "https://www.instagram.com/ignite.life_bowen.therapy/",
 };
 

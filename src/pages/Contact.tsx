@@ -1,44 +1,8 @@
-import { Email, Facebook, Instagram, Phone } from "../components/ui/Icons.tsx";
-import { email, facebook, hours, instagram, phone } from "../config.ts";
+import { hours } from "../config/config.ts";
 import Meta from "../utils/Meta.tsx";
 import IconList from "../components/ui/IconList.tsx";
-import DoubleList from "../components/ui/DoubleList.tsx";
 import ContactForm from "../components/ui/ContactForm.tsx";
-import { ReactNode } from "react";
-
-interface ContactDetail {
-  type: string;
-  icon: ReactNode;
-  href: string;
-  value: ReactNode;
-}
-
-const contactDetails: ContactDetail[] = [
-  {
-    type: "Phone",
-    icon: <Phone />,
-    href: phone.href,
-    value: <>{phone.phone}</>,
-  },
-  {
-    type: "Email",
-    icon: <Email />,
-    href: email.href,
-    value: <>{email.email}</>,
-  },
-  {
-    type: "Facebook",
-    icon: <Facebook />,
-    href: facebook.href,
-    value: <>{facebook.name}</>,
-  },
-  {
-    type: "Instagram",
-    icon: <Instagram />,
-    href: instagram.href,
-    value: <>{instagram.name}</>,
-  },
-];
+import { contactDetails } from "../config/contactConfig.tsx";
 
 const sections = [
   {
@@ -58,27 +22,36 @@ const sections = [
   },
   {
     key: "contact-form",
-    title: null,
-    content: <ContactForm />,
+    title: "Have a Question?",
+    content: (
+      <div className="pt-6">
+        <ContactForm />
+      </div>
+    ),
   },
   {
     key: "open-hours",
     title: "Open Hours",
     content: (
       <>
-        <p className="mt-6 text-lg leading-8 text-gray-600">
-          Curious about our open hours? Check our schedule below, and reach out
-          if you need any additional information.
-        </p>
         <div className="pt-8">
-          <DoubleList items={hours.map(({ day, hours }) => [day, hours])} />
+          <div className="flex w-full flex-col">
+            <div className="space-y-1">
+              {hours.map((hour) => (
+                <div key={hour.day} className="text-left text-sm sm:text-lg">
+                  <div className="font-medium">{hour.day}</div>
+                  <div>{hour.hours}</div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </>
     ),
   },
   {
     key: "map",
-    title: null,
+    title: "Maps",
     content: (
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3495.863749618485!2d153.5940622!3d-28.813133900000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b907e173f2167ab%3A0xf57717e990379006!2s10%20Granite%20St%2C%20Lennox%20Head%20NSW%202478!5e0!3m2!1sen!2sau!4v1723341407364!5m2!1sen!2sau"
@@ -86,6 +59,7 @@ const sections = [
         height="450"
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
+        className="pt-8"
       ></iframe>
     ),
   },

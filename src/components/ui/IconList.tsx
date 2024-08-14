@@ -1,8 +1,8 @@
-import { Key, ReactNode } from "react";
+import { ReactNode } from "react";
 import { Link } from "react-router-dom";
 
 interface IconListItem {
-  type: string;
+  type: string; // Using type as the key
   icon: ReactNode;
   href: string;
   value: ReactNode;
@@ -14,21 +14,17 @@ interface IconListProps {
 
 export default function IconList({ items }: IconListProps) {
   return (
-    <dl className="space-y-4 text-base leading-7 text-gray-600">
-      {items.map((item: IconListItem, index: Key | null | undefined) => (
-        <div key={index} className="flex gap-x-4">
-          <dt className="flex-none">
-            <Link to={item.href}>
+    <dl className="space-y-4 text-base leading-7 text-gray-800 hover:text-gray-950">
+      {items.map((item) => (
+        <Link to={item.href} className="flex items-center" key={item.type}>
+          <div className="flex gap-x-4">
+            <dt className="flex-none">
               <span className="sr-only">{item.type}</span>
               {item.icon}
-            </Link>
-          </dt>
-          <dd>
-            <Link className="hover:text-gray-900" to={item.href}>
-              {item.value}
-            </Link>
-          </dd>
-        </div>
+            </dt>
+            <dd>{item.value}</dd>
+          </div>
+        </Link>
       ))}
     </dl>
   );

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { navigation } from "../../config.ts";
+import { navigation } from "../../config/layoutConfig.ts";
 import ToggleButton from "../ui/ToggleButton.tsx";
 import { NavLink } from "react-router-dom";
 import styles from "./headerstyles.module.css";

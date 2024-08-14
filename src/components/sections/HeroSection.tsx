@@ -28,7 +28,7 @@ function HeroSlide({
   ImagePrev,
 }: HeroSlideProps) {
   return (
-    <div className="relative isolate flex h-[36rem] items-center justify-center overflow-hidden bg-ignite-cream md:h-[44rem] lg:h-[56rem]">
+    <div className="relative isolate flex h-[36rem] items-center justify-center overflow-hidden bg-ignite-cream md:h-[48rem] lg:h-[64rem]">
       {/* Current Image */}
       <img
         alt=""
@@ -49,7 +49,7 @@ function HeroSlide({
       <div
         className={`${styles["late-fade-out"]} mx-auto max-w-2xl py-32 sm:py-48 lg:py-56`}
       >
-        <div className="text-center">
+        <div className="-mt-8 space-y-6 text-center md:space-y-8">
           <h1
             className={`${styles["shadow-text"]} ${styles["hero-in"]} text-4xl font-bold tracking-tight text-white sm:text-6xl`}
           >
@@ -57,13 +57,13 @@ function HeroSlide({
           </h1>
 
           <p
-            className={`${styles["shadow-text"]} ${styles["hero-in-d1"]} mt-6 text-xl font-medium leading-8 text-gray-100`}
+            className={`${styles["shadow-text"]} ${styles["hero-in-d1"]} text-xl font-medium leading-8 text-gray-100`}
           >
             {content}
           </p>
 
           <div
-            className={`${styles["hero-in-d2"]} mt-6 flex items-center justify-center gap-x-6`}
+            className={`${styles["hero-in-d2"]} flex items-center justify-center gap-x-6`}
           >
             <Link to={href} className={styles["hero-button"]}>
               {button}

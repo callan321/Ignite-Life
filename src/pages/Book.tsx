@@ -1,4 +1,4 @@
-import { treatments } from "../config.ts";
+import { treatments } from "../config/config.ts";
 import Meta from "../utils/Meta.tsx";
 
 export default function Book() {
