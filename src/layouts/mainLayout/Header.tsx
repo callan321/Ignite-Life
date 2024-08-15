@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { navigation } from "../../config/layoutConfig.ts";
-import ToggleButton from "../ui/ToggleButton.tsx";
+import { navigation } from "../../config/layoutConfig.tsx";
+import ToggleButton from "../../components/ui/ToggleButton.tsx";
 import { NavLink } from "react-router-dom";
 import styles from "./headerstyles.module.css";
 
@@ -22,8 +22,8 @@ export default function Header() {
   const shutMenu = () => setIsOpen(false);
 
   const handleScroll = () => {
-    (window.scrollY > 100) ? setIsSolid(true) : setIsSolid(false);
-  }
+    window.scrollY > 100 ? setIsSolid(true) : setIsSolid(false);
+  };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -32,10 +32,12 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-40 w-full ${isSolid ?`${styles['fade-in-below']} shadow-xl` : styles['fade-in-top']  } `}
+      className={`sticky top-0 z-40 w-full ${isSolid ? `${styles["fade-in-below"]} shadow-xl` : styles["fade-in-top"]} `}
     >
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div className={`relative flex h-20 justify-between ${isSolid ? 'pt-4' : 'pt-20'}`}>
+        <div
+          className={`relative flex h-20 justify-between ${isSolid ? "pt-4" : "pt-20"}`}
+        >
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <ToggleButton
               isActive={isOpen}
@@ -53,7 +55,7 @@ export default function Header() {
                   className={({ isActive }) =>
                     `${isActive ? styles["tab-active"] : styles["tab-inactive"]} ${
                       isSolid ? styles["bottom-solid"] : styles["bottom-normal"]
-                    } inline-flex items-center relative p-1 text-lg font-medium`
+                    } relative inline-flex items-center p-1 text-lg font-medium`
                   }
                 >
                   {tab.name}

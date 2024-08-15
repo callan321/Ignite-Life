@@ -33,13 +33,13 @@ function HeroSlide({
       <img
         alt=""
         src={ImageNow}
-        className={`${styles["long-slide-in"]} absolute inset-0 -z-10 h-full w-full object-cover`}
+        className={`${styles["long-slide-in"]} absolute inset-0 -z-10 h-full w-full object-cover max-w-full `}
       />
 
       <img
         alt=""
         src={ImagePrev}
-        className={`${styles["long-slide-out"]} absolute inset-0 -z-20 h-full w-full object-cover`}
+        className={`${styles["long-slide-out"]} absolute inset-0 -z-20 h-full w-full object-cover max-w-full`}
       />
 
       {/* Background Overlay */}

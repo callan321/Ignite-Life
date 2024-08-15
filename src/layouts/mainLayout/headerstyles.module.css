@@ -30,10 +30,11 @@
 }
 
 .fade-in-below {
-  animation: fadeInSlideUp 1s ease forwards, fadeInBackground 1s ease-in forwards;
+  animation:
+    fadeInSlideUp 1s ease forwards,
+    fadeInBackground 1s ease-in forwards;
   animation-delay: 0s, 0.5s;
 }
-
 
 .fade-in-top {
   animation: fadeInSlideDown 1.5s ease forwards;

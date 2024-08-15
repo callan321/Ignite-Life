@@ -1,11 +1,11 @@
 import { copyright } from "../../config/config.ts";
-import IconList from "../ui/IconList.tsx";
-import { contactDetails } from "../../config/contactConfig.tsx";
+import IconList from "../../components/ui/IconList.tsx";
+import { contactDetails } from "../../config/layoutConfig.tsx";
 
 export default function Footer() {
   return (
     <footer
-      className="flex w-full flex-col items-center justify-center"
+      className="flex w-full flex-col items-center justify-center pt-24"
       role="contentinfo"
     >
       <div className="flex w-full items-center justify-center sm:w-11/12 xl:w-10/12">
@@ -21,7 +21,7 @@ export default function Footer() {
           <div className="flex flex-col items-center lg:pt-20">
             <div className="w-48 space-y-4">
               <h3 className="text-2xl font-semibold tracking-tight text-gray-900">
-                Newsletter
+                Contact
               </h3>
               <IconList items={contactDetails} />
             </div>

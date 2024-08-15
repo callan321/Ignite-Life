@@ -1,6 +1,8 @@
-import Meta from "../utils/Meta.tsx";
-import HeroSection from "../components/sections/HeroSection.tsx";
-import { heroSections } from "../config/config.ts";
+import Meta from "../../utils/Meta.tsx";
+import HeroSection from "./HeroSection.tsx";
+import { heroSections } from "../../config/config.ts";
+import ServicesSection from "./ServicesSection.tsx";
+import TestimonialSection from "./TestimonialSection.tsx";
 
 export default function Home() {
   return (
@@ -14,8 +16,10 @@ export default function Home() {
           "Bowen Therapy, holistic healing, pain relief, relaxation, overall well-being, natural health, Ignite Life"
         }
       />
-      <div className="flex w-full flex-col">
+      <div className="flex w-full flex-col ">
         <HeroSection sections={heroSections} />
+        <ServicesSection />
+        <TestimonialSection />
       </div>
     </>
   );

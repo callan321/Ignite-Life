@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
-import Footer from "../components/sections/Footer.tsx";
-import Header from "../components/sections/Header.tsx";
+import Footer from "./Footer.tsx";
+import Header from "./Header.tsx";
 
 export default function MainLayout() {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen w-full flex-col overflow-hidden">
       <Header />
       <main className="-m-20">
         <Outlet />
