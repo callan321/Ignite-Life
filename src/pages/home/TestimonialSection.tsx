@@ -1,12 +1,20 @@
 import Page2 from "../../components/Page2.tsx";
 import { testimonial } from "../../config/homeConfig.tsx";
+import { useEffect } from "react";
+import { animateOnScroll } from "../../utils/animateOnScroll.ts";
+
+
 export default function TestimonialSection() {
+  useEffect(() => {
+    animateOnScroll();
+  }, []);
+
   return (
     <Page2>
       <div
         className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 lg:flex-row lg:items-stretch w-8/12">
         <div className="-mt-8 w-full max-w-2xl lg:-mb-8 lg:w-96 lg:flex-none">
-          <div className="relative aspect-[2/1] h-full md:-mx-8 lg:mx-0 lg:aspect-auto hidden lg:block">
+          <div className="relative aspect-[2/1] h-full md:-mx-8 lg:mx-0 lg:aspect-auto hidden lg:block animate-slide-up">
             <img
               alt={testimonial.name}
               src={testimonial.image}
@@ -15,7 +23,7 @@ export default function TestimonialSection() {
           </div>
         </div>
         <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24">
-          <figure className="relative isolate pt-6 sm:pt-12">
+          <figure className="relative isolate pt-6 sm:pt-12 animate-slide-in">
             <svg
               fill="none"
               viewBox="0 0 162 128"
