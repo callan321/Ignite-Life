@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import HeroButton from "./HeroButton.tsx";
+import HeroButton from "../../components/ui/HeroButton.tsx";
 import { useNavigate } from "react-router-dom";
 
 interface HeroSectionProps {
