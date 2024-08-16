@@ -1,13 +1,9 @@
 import Page2 from "../../components/Page2.tsx";
 import { testimonial } from "../../config/homeConfig.tsx";
-import { useEffect } from "react";
-import { animateOnScroll } from "../../utils/animateOnScroll.ts";
+
 
 
 export default function TestimonialSection() {
-  useEffect(() => {
-    animateOnScroll();
-  }, []);
 
   return (
     <Page2>
