@@ -1,12 +1,19 @@
 import { ReactNode } from "react";
 
-export default function Page2({ children, bg, bottomColor, topColor  }: { children: ReactNode ; bg: string; bottomColor: string, topColor: string }) {
+export default function Page2({
+  children,
+  bg,
+  bottomColor,
+  topColor,
+}: {
+  children: ReactNode;
+  bg: string;
+  bottomColor: string;
+  topColor: string;
+}) {
   return (
-    <div
-      className="relative z-10"
-      style={{ backgroundColor: bg }}
-    >
-      <div aria-hidden="true" className="absolute inset-0 overflow-hidden ">
+    <div className="relative z-10" style={{ backgroundColor: bg }}>
+      <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
         <div className="absolute left-[calc(50%-19rem)] top-[calc(50%-36rem)] transform-gpu blur-3xl">
           <div
             style={{

@@ -15,7 +15,7 @@ export default function HeroSection({
 }: {
   sections: HeroSectionProps[];
 }) {
-  const TIMEOUT = 10000;
+  const TIMEOUT = 15000;
   const [currentSection, setCurrentSection] = useState(0);
   const [prevImage, setPrevImage] = useState<string | null>(null);
 
