@@ -1,16 +1,12 @@
 import Page2 from "../../components/Page2.tsx";
 import { testimonial } from "../../config/homeConfig.tsx";
 
-
-
 export default function TestimonialSection() {
-
   return (
     <Page2>
-      <div
-        className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 lg:flex-row lg:items-stretch w-8/12">
+      <div className="mx-auto flex w-8/12 max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:flex-row lg:items-stretch lg:px-8">
         <div className="-mt-8 w-full max-w-2xl lg:-mb-8 lg:w-96 lg:flex-none">
-          <div className="relative aspect-[2/1] h-full md:-mx-8 lg:mx-0 lg:aspect-auto hidden lg:block animate-slide-up">
+          <div className="animate-slide-up relative hidden aspect-[2/1] h-full md:-mx-8 lg:mx-0 lg:block lg:aspect-auto">
             <img
               alt={testimonial.name}
               src={testimonial.image}
@@ -19,7 +15,7 @@ export default function TestimonialSection() {
           </div>
         </div>
         <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24">
-          <figure className="relative isolate pt-6 sm:pt-12 animate-slide-in">
+          <figure className="animate-slide-in relative isolate pt-6 sm:pt-12">
             <svg
               fill="none"
               viewBox="0 0 162 128"
@@ -33,18 +29,21 @@ export default function TestimonialSection() {
               <use x={86} href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" />
             </svg>
             <blockquote className="text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
-              <p>
-                {testimonial.description}
-              </p>
+              <p>{testimonial.description}</p>
             </blockquote>
             <figcaption className="mt-8 text-base">
-              <div className="flex md:gap-x-6 gap-x-3">
-                <div className="lg:hidden   ">
-                  <img  alt={testimonial.name}
-                        src={testimonial.image} className="h-16 w-16 rounded-full md:h-24 md:w-24 "></img>
+              <div className="flex gap-x-3 md:gap-x-6">
+                <div className="lg:hidden">
+                  <img
+                    alt={testimonial.name}
+                    src={testimonial.image}
+                    className="h-16 w-16 rounded-full md:h-24 md:w-24"
+                  ></img>
                 </div>
                 <div className="md:pt-4">
-                  <div className="font-semibold text-white">{testimonial.name}</div>
+                  <div className="font-semibold text-white">
+                    {testimonial.name}
+                  </div>
                   <div className="mt-1 text-gray-400">{testimonial.job}</div>
                 </div>
               </div>
@@ -53,5 +52,5 @@ export default function TestimonialSection() {
         </div>
       </div>
     </Page2>
-);
+  );
 }

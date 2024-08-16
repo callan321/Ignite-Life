@@ -16,7 +16,7 @@ export default function Home() {
           "Bowen Therapy, holistic healing, pain relief, relaxation, overall well-being, natural health, Ignite Life"
         }
       />
-      <div className="flex w-full flex-col ">
+      <div className="flex w-full flex-col">
         <HeroSection sections={heroSections} />
         <ServicesSection />
         <TestimonialSection />

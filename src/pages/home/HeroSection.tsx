@@ -11,8 +11,8 @@ interface HeroSectionProps {
 }
 
 export default function HeroSection({
-                                      sections,
-                                    }: {
+  sections,
+}: {
   sections: HeroSectionProps[];
 }) {
   const TIMEOUT = 10000;
@@ -31,7 +31,6 @@ export default function HeroSection({
 
   useEffect(() => {
     const interval = setInterval(() => {
-
       setFadeOutButton(true);
       setTimeout(() => {
         setFadeOutContent(true);
@@ -40,11 +39,10 @@ export default function HeroSection({
         setFadeOutTitle(true);
       }, 1200);
 
-
       setTimeout(() => {
         setPrevImage(sections[currentSection].backgroundImage);
         setCurrentSection((prevSection) =>
-          prevSection === sections.length - 1 ? 0 : prevSection + 1
+          prevSection === sections.length - 1 ? 0 : prevSection + 1,
         );
         setFadeOutTitle(false);
         setFadeOutContent(false);
@@ -82,7 +80,7 @@ export default function HeroSection({
           key={prevImage}
           alt=""
           src={prevImage}
-          className={`absolute inset-0 -z-20 h-full w-full object-cover max-w-full transition-opacity duration-1000 fade-out`}
+          className={`fade-out absolute inset-0 -z-20 h-full w-full max-w-full object-cover transition-opacity duration-1000`}
         />
       )}
 
@@ -91,7 +89,7 @@ export default function HeroSection({
         key={sections[currentSection].backgroundImage}
         alt=""
         src={sections[currentSection].backgroundImage}
-        className="absolute inset-0 -z-30 h-full w-full object-cover max-w-full transition-opacity duration-1000 fade-in"
+        className="fade-in absolute inset-0 -z-30 h-full w-full max-w-full object-cover transition-opacity duration-1000"
       />
 
       {/* Background Overlay */}
@@ -99,7 +97,10 @@ export default function HeroSection({
 
       {/* Main Content */}
       <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-        <div key={currentSection} className="-mt-8 space-y-6 text-center text-shadow md:space-y-8">
+        <div
+          key={currentSection}
+          className="text-shadow -mt-8 space-y-6 text-center md:space-y-8"
+        >
           <h1
             className={`text-4xl font-bold tracking-tight text-white sm:text-6xl ${
               titleVisible ? "slide-in" : "opacity-0"
@@ -111,7 +112,7 @@ export default function HeroSection({
           <p
             className={`text-xl ${
               contentVisible ? "slide-in-typing" : "opacity-0"
-            } font-medium leading-8 text-shadow text-gray-100 ${
+            } text-shadow font-medium leading-8 text-gray-100 ${
               fadeOutContent ? "fade-out" : ""
             }`}
           >

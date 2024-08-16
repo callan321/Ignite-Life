@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
 
-export default function Page2({children} : {children: ReactNode}) {
+export default function Page2({ children }: { children: ReactNode }) {
   return (
-    <div className="relative z-10 mt-32 bg-[#745e4d] pb-20 sm:mt-56 sm:pb-24 xl:pb-0 pt-6">
+    <div className="relative z-10 mt-32 bg-[#745e4d] pb-20 pt-6 sm:mt-56 sm:pb-24 xl:pb-0">
       <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
         <div className="absolute left-[calc(50%-19rem)] top-[calc(50%-36rem)] transform-gpu blur-3xl">
           <div
@@ -16,5 +16,5 @@ export default function Page2({children} : {children: ReactNode}) {
       </div>
       {children}
     </div>
-  )
+  );
 }
