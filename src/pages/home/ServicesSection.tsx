@@ -1,8 +1,10 @@
 import { treatments, treatmentsIntro } from "../../config/homeConfig.tsx";
+import HeroButton from "./HeroButton.tsx";
 
 export default function ServicesSection() {
   return (
     <div className="mx-auto mt-32 max-w-7xl sm:mt-56 lg:px-8 px-4">
+      <HeroButton></HeroButton>
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="mt-2 text-3xl font-bold tracking-tight text-black sm:text-4xl">
           {treatmentsIntro.title}

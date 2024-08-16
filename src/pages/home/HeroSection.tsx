@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import styles from "./herosectionstyles.module.css";
+import HeroButton from "./HeroButton.tsx";
 
 interface HeroSlideProps {
   title: string;
@@ -68,6 +69,7 @@ function HeroSlide({
             <Link to={href} className={styles["hero-button"]}>
               {button}
             </Link>
+            <HeroButton/>
           </div>
         </div>
       </div>
