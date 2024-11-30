@@ -1,5 +1,5 @@
 import { ChangeEvent, useState } from "react";
-import { supabase } from "../../utils/supabaseClient.ts";
+
 import { FormEvent } from "react";
 
 export default function ContactForm() {
@@ -20,25 +20,9 @@ export default function ContactForm() {
     });
   };
 
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-
-    const { name, phone_number, email, message } = formState;
-
-    const { error } = await supabase
-      .from("ContactForm")
-      .insert([{ name, phone_number, email, message }]);
-
-    if (error) {
-      console.error("Error inserting data:", error.message);
-    } else {
-      console.log("Form submitted successfully");
-      setFormState({ name: "", phone_number: "", email: "", message: "" });
-    }
-  };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form >
       <div className="max-w-xl lg:mr-0 lg:max-w-lg">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>

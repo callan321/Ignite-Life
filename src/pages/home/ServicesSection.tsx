@@ -16,11 +16,18 @@ export default function ServicesSection() {
           {treatments.map((feature) => (
             <div key={feature.title} className="flex flex-col">
               <dt className="text-base font-semibold leading-7 text-white">
-                <div className="subtle-hover-effect flex items-center justify-between">
+                <div className="    flex items-center justify-between"
+                >
                   <img
+                    style={{
+                      borderTopLeftRadius: "50%",
+                      borderTopRightRadius: "50%",
+                      borderBottomLeftRadius: "2%",
+                      borderBottomRightRadius: "2%"
+                    }}
                     src={"bowen1.jpg"}
                     alt={feature.title}
-                    className="rounded object-cover sm:rounded-2xl md:aspect-[3/2]"
+                    className=" object-cover subtle-hover-effect  md:aspect-[3/2]"
                   />
                 </div>
                 <h3 className="mt-2 p-6 text-center text-2xl text-gray-800 lg:p-8">

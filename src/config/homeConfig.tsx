@@ -14,7 +14,7 @@ export const baby = {
     "Extremely gentle therapy aiding your baby with, feeding problems, projectile vomiting, colic, asthma symptoms or general distress.",
 };
 export const children = {
-  name: "Children",
+  name: "Baby Children and teens",
   id: "ages 3-12",
   href: "https://book.squareup.com/appointments/occ9h4nxjya007/location/LAD6P3NX6CZA4/services/DNIKMNGGLBTZ4TEVVKOYGAHQ",
   price: "$65",
@@ -34,8 +34,8 @@ export const adult = {
 
 export const treatments = [
   {
-    title: baby.name,
-    description: baby.description,
+    title: adult.name,
+    description: adult.description,
     image: "bowen1.jpg",
   },
   {
@@ -44,9 +44,9 @@ export const treatments = [
     image: "bowen2.jpg",
   },
   {
-    title: adult.name,
-    description: adult.description,
-    image: "bowen3.jpg",
+    title: baby.name,
+    description: baby.description,
+    image: "bowen1.jpg",
   },
 ];
 
@@ -55,5 +55,5 @@ export const testimonial = {
   job: "Fashion designer",
   description:
     "The first time I went to Heather for Bowen Therapy was in hope she could help me with a knee that I injured jogging that wasn't improving. She resolved the knee problem within a few weeks. In addition to this, l noticed improved energy levels and better within myself...",
-  image: "heather.jpg",
+  image: "bowen1.jpg",
 };
