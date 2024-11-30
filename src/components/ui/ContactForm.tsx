@@ -1,7 +1,5 @@
 import { ChangeEvent, useState } from "react";
 
-import { FormEvent } from "react";
-
 export default function ContactForm() {
   const [formState, setFormState] = useState({
     name: "",
