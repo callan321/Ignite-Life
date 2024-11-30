@@ -1,13 +1,20 @@
-import Page2 from "../../components/sections/Page2.tsx";
 import { testimonial } from "../../config/homeConfig.tsx";
 
 export default function TestimonialSection() {
   return (
-    <div className="mt-24">
-      <Page2 bg={"#bd9479"} bottomColor={"#dfe8de"} topColor={"#020404"}>
-        <div className="mx-auto flex w-8/12 max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 py-8 sm:gap-y-8 lg:flex-row lg:items-stretch lg:px-8">
+    <>
+
+
+      <div className="mt-24">
+        <div
+          className="bg-[url('sand1.jpg')] bg-cover bg-center h-[32rem] flex items-center justify-center"
+        >
+
+        <div
+          className="mx-auto flex w-8/12 max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 py-8 sm:gap-y-8 lg:flex-row lg:items-stretch lg:px-8">
           <div className="w-full max-w-2xl lg:w-96 lg:flex-none">
-            <div className="subtle-hover-effect relative hidden aspect-[2/1] h-full md:-mx-8 lg:mx-0 lg:block lg:aspect-auto">
+            <div
+              className="subtle-hover-effect relative hidden aspect-[2/1] h-full md:-mx-8 lg:mx-0 lg:block lg:aspect-auto">
               <img
                 alt={testimonial.name}
                 src={testimonial.image}
@@ -53,7 +60,8 @@ export default function TestimonialSection() {
             </figure>
           </div>
         </div>
-      </Page2>
-    </div>
+        </div>
+      </div>
+    </>
   );
 }

@@ -76,10 +76,10 @@ export const heroSections = [
   },
   {
     title: "Bowen Therapy",
-    content: "Discover the Transformative Benefits",
+    content: "Embrace bowen thepay with heather - A gental therpeudic holistic touch that guides the bodies inate ability to restore well being, harmonise energy centers, align and cultivate a deeper sense of inner connection and improved health",
     button: "Learn More",
     href: "https://ignite-life-bowen-therapy.square.site",
-    backgroundImage: "/hero2.jpg",
+    backgroundImage: "/sand1.jpg",
   },
 ];
 

@@ -27,7 +27,7 @@ export default function ServicesSection() {
                     }}
                     src={"bowen1.jpg"}
                     alt={feature.title}
-                    className=" object-cover subtle-hover-effect  md:aspect-[3/2]"
+                    className=" object-cover subtle-hover-effect shadow-2xl md:aspect-[3/2]"
                   />
                 </div>
                 <h3 className="mt-2 p-6 text-center text-2xl text-gray-800 lg:p-8">
